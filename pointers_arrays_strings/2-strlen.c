@@ -2,13 +2,16 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _strlen - increase the lengt
+ * @s: number
  *
- * Return: Always 0.
+ * Return: len
  */
+
 int _strlen(char *s)
 {
 	int len;
+
 	for (len = 0; s[len] != '\0'; )
 		len++;
 	return (len);
