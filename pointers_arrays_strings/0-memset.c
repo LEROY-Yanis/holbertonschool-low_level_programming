@@ -4,6 +4,8 @@
 /**
  * _memset - returns a pointer to the memory
  * @n: number
+ * @s: pointer
+ * @b: byte
  *
  * Return: s (succes)
  */
