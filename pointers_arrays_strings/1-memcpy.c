@@ -7,7 +7,7 @@
  * @src: pointer source
  * @dest: pointer destination
  *
- * Return: dest (succes)
+ * Return: dest succes
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
