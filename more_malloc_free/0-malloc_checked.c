@@ -3,7 +3,9 @@
 #include <stdlib.h>
 
 /**
- * 
+ * malloc_checked - that allocates memory using malloc
+ * @b: allocated of memory
+ * Return: pointer to the allocated memory
  */
 
 void *malloc_checked(unsigned int b)
