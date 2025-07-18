@@ -32,7 +32,7 @@ operator = get_op_func(argv[2]);
 if (operator == NULL)
 {
 printf("Error\n");
-exit(98);
+exit(99);
 }
 
 if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && num2 == 0)
