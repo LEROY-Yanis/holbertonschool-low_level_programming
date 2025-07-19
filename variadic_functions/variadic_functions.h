@@ -1,4 +1,5 @@
-#ifdef VARIADIC_FUNCTIONS_H
+/* Correction du include guard */
+#ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
 #include <stdio.h>
@@ -9,4 +10,4 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-#endif /* VARIADIC_FUNCTION_H */
+#endif /* VARIADIC_FUNCTIONS_H */
