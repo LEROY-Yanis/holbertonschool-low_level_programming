@@ -8,6 +8,7 @@
 size_t print_list(const list_t *h)
 {
 	unsigned int count = 0;
+	unsigned int i;
 
 	while (h != NULL)
 	{
@@ -26,8 +27,8 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			/* Print length */
 			unsigned int len = h->len, div = 1;
+
 			while (len / div >= 10)
 				div *= 10;
 			while (div)
@@ -38,8 +39,7 @@ size_t print_list(const list_t *h)
 			}
 			_putchar(']');
 			_putchar(' ');
-			/* Print string */
-			for (unsigned int i = 0; h->str[i] != '\0'; i++)
+			for (i = 0; h->str[i] != '\0'; i++)
 				_putchar(h->str[i]);
 			_putchar('\n');
 		}
