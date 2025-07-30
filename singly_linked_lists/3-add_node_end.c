@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * add_node_end - a function that adds a new node at the end of a list
+ * add_node_end - a function that adds a new node at the end of the list_t list
  * @head: the head of string
  * @str: the string
+ * Return: the address of the new element, or NULL if it failed
  */
 
 list_t *add_node_end(list_t **head, const char *str)
