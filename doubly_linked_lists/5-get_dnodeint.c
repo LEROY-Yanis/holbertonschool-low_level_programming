@@ -9,14 +9,14 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
-	dlistint_t *actual;
 
-	actual = head;
-	while (actual != NULL && i < index)
+	while (head != NULL && i < index)
 	{
-		actual = (*actual).next;
+		head = (*head).next;
 		i++;
 	}
+	if (head == NULL)
+		return (NULL);
 
-	return (actual);
+	return (head);
 }
