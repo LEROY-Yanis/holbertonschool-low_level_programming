@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - Deletes a node at a specific index in a doubly linked list.
+ * delete_dnodeint_at_index - Deletes a node at a specific index in a list.
  * @head: Pointer to the pointer to the head of the list.
  * @index: The index of the node to delete.
  * Return: 1 if successful, -1 if it fails.
@@ -9,35 +9,37 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-    dlistint_t *current = *head;
-    unsigned int i;
+	dlistint_t *actual;
+	unsigned int i = 0;
 
-    if (current == NULL)
-        return (-1);
+	if (head == NULL || *head == NULL)
+		return (-1);
 
-    if (index == 0)
-    {
-        *head = current->next;
-        if (*head != NULL)
-            (*head)->prev = NULL;
-        free(current);
-        return (1);
-    }
+	actual = *head;
+	if (index == 0)
+	{
+		*head = (*actual).next;
+		if (*head != NULL)
+			(*head)->prev = NULL;
+		free(actual);
+		return (1);
+	}
 
-    for (i = 0; current != NULL && i < index; i++)
-    {
-        current = current->next;
-    }
+	while (actual != NULL && i < index)
+	{
+		actual = (*actual).next;
+		i++;
+	}
 
-    if (current == NULL)
-        return (-1);
+	if (actual == NULL)
+		return (-1);
 
-    if (current->prev != NULL)
-        current->prev->next = current->next;
+	if ((*actual).prev != NULL)
+		(*actual).prev->next = (*actual).next;
 
-    if (current->next != NULL)
-        current->next->prev = current->prev;
+	if ((*actual).next != NULL)
+		(*actual).next->prev = (*actual).prev;
 
-    free(current);
-    return (1);
+	free(actual);
+	return (1);
 }
